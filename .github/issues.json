@@ -1,6 +1,6 @@
 {
-  templates: [
-    {template: ".github/ISSUE1.md", assignees: []},
-    {template: ".github/ISSUE2.md", assignees: ["osallou"]}
+  "templates": [
+    {"template": ".github/ISSUE1.md", "assignees": []},
+    {"template": ".github/ISSUE2.md", "assignees": ["osallou"]}
  ]
 }
