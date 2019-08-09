@@ -4,4 +4,4 @@ labels: bug
 ---
 issue1: {{ payload.sender.login }}
 
-should follow tools training
+should follow tools training..
