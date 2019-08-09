@@ -1,6 +1,7 @@
 ---
 title: second task
-assignees: osallou
 labels: bug
 ---
-issue1: {{ payload.sender.login }}
+issue2: {{ payload.sender.login }}
+
+should create an account
