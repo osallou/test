@@ -1,13 +1,15 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  deb_build:
     runs-on: ubuntu-latest
     name: A job to test debian build
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: test debian package build
       id: debian
-      uses: osallou/deb-checker-action@latest
+      uses: osallou/deb-checker-action@master
       with:
         err-on-lint: 'false'
     #- name: Get the output lint status
