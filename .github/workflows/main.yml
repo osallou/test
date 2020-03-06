@@ -11,6 +11,6 @@ jobs:
       id: debian
       uses: osallou/deb-checker-action@master
       with:
-        err-on-lint: 'false'
+        err-on-lint: 'true'
     - name: get debversion
       run: echo "Deb package version ${{steps.debian.outputs.debversion}}"
