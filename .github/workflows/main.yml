@@ -12,5 +12,5 @@ jobs:
       uses: osallou/deb-checker-action@master
       with:
         err-on-lint: 'false'
-    #- name: Get the output lint status
-    #  run: echo "Lint status: ${{ steps.debian.outputs.lint }}"
+    - name: get debversion
+      run: echo "Deb package version ${{steps.debian.outputs.debversion}}"
