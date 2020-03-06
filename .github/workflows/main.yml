@@ -10,6 +10,5 @@ jobs:
       uses: osallou/deb-checker-action
       with:
         err-on-lint: 'false'
-    # Use the output from the `hello` step
     - name: Get the output lint status
       run: echo "Lint status: ${{ steps.debian.outputs.lint }}"
