@@ -1,0 +1,82 @@
+squizz (0.99d+dfsg-2) unstable; urgency=medium
+
+  * debhelper 11 (+ dh_auto_test --no-parallel)
+  * Update README.source
+  * Point Vcs fields to salsa.debian.org
+  * Standards-Version: 4.2.1
+  * Secure URI in copyright format
+  * Respect DEB_BUILD_OPTIONS in override_dh_auto_test target
+  * Remove trailing whitespace in debian/copyright
+
+ -- Andreas Tille <tille@debian.org>  Tue, 30 Oct 2018 12:01:25 +0100
+
+squizz (0.99d+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * cme fix dpkg-control
+  * Realise that debian/compat > 9 will break tests due to not set $srcdir
+    variable
+
+ -- Andreas Tille <tille@debian.org>  Sun, 18 Feb 2018 15:22:13 +0100
+
+squizz (0.99c+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Moved packaging to Git
+  * cme fix dpkg-control
+  * xz compression and repack in d/watch
+  * add versioned Depends from libsquizz
+  * remove broken symbols file - feel free to re-add a corrected one
+  * hardening=+all
+  * drop breaks itself
+
+ -- Andreas Tille <tille@debian.org>  Fri, 09 Sep 2016 12:09:45 +0200
+
+squizz (0.99b+dfsg-3) unstable; urgency=low
+
+  * Add auto-reconf build for ppc64el arch (Closes: #734828).
+       Thanks to Logan Rosen <logan@ubuntu.com>
+
+ -- Olivier Sallou <osallou@debian.org>  Sat, 06 Jul 2013 09:46:23 +0200
+
+squizz (0.99b+dfsg-2) unstable; urgency=low
+
+  * Fix squizz dependency (Closes: #715120)
+
+ -- Olivier Sallou <osallou@debian.org>  Sat, 06 Jul 2013 09:35:43 +0200
+
+squizz (0.99b+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  [ Anreas Tille ]
+  * debian/copyright:
+     - DEP5
+     - Add Files-Excluded to document what was removed from original source
+  * debian/watch: handle +dfsg suffix
+
+ -- Olivier Sallou <osallou@debian.org>  Mon, 18 Feb 2013 11:55:27 +0200
+
+squizz (0.99a-2) unstable; urgency=low
+
+  [ Charles Plessy ]
+  * Split debian/patches/debianpackaging into:
+    debian/patches/correct-manpages-section.patch and
+    debian/patches/disable-swissprot-test.patch for better readability.
+  * Make the repacked upstream archive directory end in “.orig”
+    (debian/get-orig-sources, see Developers Reference 3.4.4 §6.7.8.2).
+
+  [ Andreas Tille ]
+  * Section: libs (according to the decision of ftpmaster in override)
+  * Standards-Version: 3.9.2 (no changes needed)
+  * Debhelper 8 (control+compat)
+  * Fixed Vcs fields
+  * Enhanced short description
+    Closes: #625929
+
+ -- Andreas Tille <tille@debian.org>  Thu, 05 Jan 2012 12:06:56 +0100
+
+squizz (0.99a-1) unstable; urgency=low
+
+  * Initial release (Closes: #618689)
+
+ -- Olivier Sallou <olivier.sallou@irisa.fr>  Fri, 18 Mar 2011 11:03:46 +0100

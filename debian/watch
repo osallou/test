@@ -1,0 +1,4 @@
+version=3
+
+opts="passive,dversionmangle=s/[~\+]dfsg//g,repacksuffix=+dfsg,repack,compression=xz" \
+   ftp://ftp.pasteur.fr/pub/gensoft/projects/squizz/squizz-(.*)\.tar\.gz

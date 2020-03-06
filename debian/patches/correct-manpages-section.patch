@@ -1,0 +1,31 @@
+Subject: Fix man page section
+Description: wrong section used
+Author: Olivier Sallou <osallou@debian.org>
+Last-Updated: 2013-02-18
+Forwarded: Yes
+--- a/doc/alifmt.man
++++ b/doc/alifmt.man
+@@ -123,8 +123,8 @@
+ .rm #[ #] #H #V #F C
+ .\" ========================================================================
+ .\"
+-.IX Title "ALIFMT 1"
+-.TH ALIFMT 1 "2013-03-29" "Unix" "User Manuals"
++.IX Title "ALIFMT 5"
++.TH ALIFMT 5 "2013-03-29" "Unix" "User Manuals"
+ .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
+ .\" way too many mistakes in technical documents.
+ .if n .ad l
+--- a/doc/seqfmt.man
++++ b/doc/seqfmt.man
+@@ -123,8 +123,8 @@
+ .rm #[ #] #H #V #F C
+ .\" ========================================================================
+ .\"
+-.IX Title "SEQFMT 1"
+-.TH SEQFMT 1 "2013-03-29" "Unix" "User Manuals"
++.IX Title "SEQFMT 5"
++.TH SEQFMT 5 "2013-03-29" "Unix" "User Manuals"
+ .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
+ .\" way too many mistakes in technical documents.
+ .if n .ad l

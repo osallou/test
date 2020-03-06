@@ -1,0 +1,89 @@
+Subject: Disable tests using copyrighted seq
+Description: upstream constains copyrighted sequence,
+ removed form packaged. This patch removes tests using this
+ sequence
+Author: Olivier Sallou <osallou@debian.org>
+Last-Updated: 2013-02-18
+Forwarded: No
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -7,7 +7,7 @@ TESTS = squizz.sh fmtseq.sh fmtali.sh co
+ 
+ TESTS_ALIS = clustal.sh mega.sh msf.sh nexusi.sh phylipi.sh phylips.sh \
+ 	stockholm.sh
+-TESTS_SEQS = embl.sh genbank.sh ig.sh nbrf.sh raw.sh sprot.sh
++TESTS_SEQS = embl.sh genbank.sh ig.sh nbrf.sh raw.sh
+ 
+ XFAIL_TESTS =
+ 
+@@ -19,6 +19,6 @@ ALIS = align/clustal.seq align/fasta.seq
+ SEQS = sequence/embl.seq sequence/fasta.seq sequence/gde.seq \
+ 	sequence/genbank.seq sequence/genpept.seq sequence/gcg.seq \
+ 	sequence/ig.seq sequence/nbrf.seq sequence/codata.seq sequence/raw.seq \
+-	sequence/refseqn.seq sequence/refseqp.seq sequence/sprot.seq
++	sequence/refseqn.seq sequence/refseqp.seq
+ 
+ EXTRA_DIST = $(TESTS) $(DATAS)
+--- a/test/Makefile.in
++++ b/test/Makefile.in
+@@ -458,7 +458,7 @@ TESTS = squizz.sh fmtseq.sh fmtali.sh co
+ TESTS_ALIS = clustal.sh mega.sh msf.sh nexusi.sh phylipi.sh phylips.sh \
+ 	stockholm.sh
+ 
+-TESTS_SEQS = embl.sh genbank.sh ig.sh nbrf.sh raw.sh sprot.sh
++TESTS_SEQS = embl.sh genbank.sh ig.sh nbrf.sh raw.sh
+ DATAS = $(ALIS) $(SEQS)
+ ALIS = align/clustal.seq align/fasta.seq align/mega.seq align/msf.seq \
+ 	align/nexusi.seq align/phylipi.seq align/phylips.seq align/stock.seq
+@@ -466,7 +466,7 @@ ALIS = align/clustal.seq align/fasta.seq
+ SEQS = sequence/embl.seq sequence/fasta.seq sequence/gde.seq \
+ 	sequence/genbank.seq sequence/genpept.seq sequence/gcg.seq \
+ 	sequence/ig.seq sequence/nbrf.seq sequence/codata.seq sequence/raw.seq \
+-	sequence/refseqn.seq sequence/refseqp.seq sequence/sprot.seq
++	sequence/refseqn.seq sequence/refseqp.seq
+ 
+ EXTRA_DIST = $(TESTS) $(DATAS)
+ all: all-am
+--- a/test/convseq.sh
++++ b/test/convseq.sh
+@@ -4,7 +4,7 @@ tmpseq=_convert.seq
+ 
+ ## Sequence files location
+ seqdir=$srcdir/sequence
+-seqlist='codata.seq embl.seq fasta.seq gcg.seq gde.seq genbank.seq genpept.seq ig.seq nbrf.seq raw.seq refseqn.seq refseqp.seq sprot.seq'
++seqlist='codata.seq embl.seq fasta.seq gcg.seq gde.seq genbank.seq genpept.seq ig.seq nbrf.seq raw.seq refseqn.seq refseqp.seq'
+ 
+ ## Checks CODATA-like sequence
+ for f in $seqlist; do
+@@ -61,10 +61,10 @@ for f in $seqlist; do
+ done
+ 
+ ## Checks SWISSPROT-like sequence
+-for f in $seqlist; do
+-  ../src/squizz -c swissprot $seqdir/$f >$tmpseq 2>/dev/null
+-  (../src/squizz $tmpseq 2>&1 | grep -v SWISSPROT) && exit 1
+-done
++#for f in $seqlist; do
++#  ../src/squizz -c swissprot $seqdir/$f >$tmpseq 2>/dev/null
++#  (../src/squizz $tmpseq 2>&1 | grep -v SWISSPROT) && exit 1
++#done
+ 
+ ## Clean temp files
+ rm -f $tmpseq
+--- a/test/fmtseq.sh
++++ b/test/fmtseq.sh
+@@ -58,10 +58,10 @@ for f in $seqlist; do
+ done
+ 
+ ## Checks SWISSPROT-like sequence
+-seqlist='sprot.seq'
+-for f in $seqlist; do
+-  (../src/squizz $srcdir/$f 2>&1 | grep -v SWISSPROT) && exit 1
+-done
++#seqlist='sprot.seq'
++#for f in $seqlist; do
++#  (../src/squizz $srcdir/$f 2>&1 | grep -v SWISSPROT) && exit 1
++#done
+ 
+ exit 0
+ 

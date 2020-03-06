@@ -1,0 +1,57 @@
+Source: squizz
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Uploaders: Olivier Sallou <osallou@debian.org>,
+           Andreas Tille <tille@debian.org>
+Section: science
+Priority: optional
+Build-Depends: debhelper (>= 11~)
+Standards-Version: 4.2.1
+Vcs-Browser: https://salsa.debian.org/med-team/squizz
+Vcs-Git: https://salsa.debian.org/med-team/squizz.git
+Homepage: ftp://ftp.pasteur.fr/pub/gensoft/projects/squizz/
+
+Package: squizz
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Converter for genetic sequences and alignments
+ Squizz is a sequence/alignment format checker, but it has some
+ conversion capabilities too.
+ Most common sequence and alignment formats are supported :
+  - EMBL, FASTA, GCG, GDE, GENBANK, IG, NBRF, PIR (codata), RAW, and
+   SWISSPROT.
+  - CLUSTAL, FASTA, MEGA, MSF, NEXUS, PHYLIP (interleaved and sequential) and
+   STOCKHOLM.
+
+Package: libsquizz
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Conversion libs used by squizz genetic sequence converter
+ Squizz is a sequence/alignment format checker, but it has some
+ conversion capabilities too.
+ Most common sequence and alignment formats are supported :
+  - EMBL, FASTA, GCG, GDE, GENBANK, IG, NBRF, PIR (codata), RAW, and
+   SWISSPROT.
+  - CLUSTAL, FASTA, MEGA, MSF, NEXUS, PHYLIP (interleaved and sequential) and
+   STOCKHOLM.
+ .
+ This package provides required libs for squizz binary
+
+Package: libsquizz-dev
+Architecture: any
+Section: libdevel
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libsquizz  (= ${binary:Version})
+Description: development tools for squizz genetic sequence converter
+ Squizz is a sequence/alignment format checker, but it has some
+ conversion capabilities too.
+ Most common sequence and alignment formats are supported :
+  - EMBL, FASTA, GCG, GDE, GENBANK, IG, NBRF, PIR (codata), RAW, and
+   SWISSPROT.
+  - CLUSTAL, FASTA, MEGA, MSF, NEXUS, PHYLIP (interleaved and sequential) and
+   STOCKHOLM.
+ .
+ This package provides the required static libs and header files of squizz

@@ -1,0 +1,5 @@
+# Libraries do not worth specific packages (libsquizz-bioali0...). They
+# do the same job, only format is different. There is no use of a single
+# one besides the other. Both are packaged in "libsquizz"
+libsquizz: package-name-doesnt-match-sonames libbioali0 libbioseq0
+

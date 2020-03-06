@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to test debian build
+    steps:
+    - name: test debian package build
+      id: debian
+      uses: osallou/deb-checker-action
+      with:
+        err-on-lint: 'false'
+    # Use the output from the `hello` step
+    - name: Get the output lint status
+      run: echo "Lint status: ${{ steps.debian.outputs.lint }}"

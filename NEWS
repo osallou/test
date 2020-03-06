@@ -1,0 +1,29 @@
+What's new in 1.00:
+
+* CODATA:
+  - New, renamed from old PIR format.
+* GENBANK:
+  - Add support for RefSeq DBLINK keyword.
+  - Allow WGS entries.
+* MEGA:
+  - Support old statement formatted title lines.
+  - Handle identical character `.' in sequences.
+* NEXUS:
+  - Allow sequence names with spaces.
+  - Improve comments support (nested, ...).
+* NBRF:
+  - PIR is now an alias to this format.
+* RAW:
+  - Allow gaps in sequence (mostly for consistency with other formats).
+* STOCKHOLM:
+  - Recognise '_' and '~' characters as gaps.
+* SWISSPROT:
+  - Add support for UniProtKB release 14.0 DE line.
+
+* All alignment formats correctly output sequences with spaces in
+  their names.
+
+What's new in 0.99:
+
+* This is the first version. Everything new ...
+

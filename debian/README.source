@@ -1,0 +1,5 @@
+Squizz was package for only purpose since it is needed by mobyle.  Since
+mobyle is end of life and will probably not released after Buster this
+library can vanish together with mobyle.
+
+ -- Andreas Tille <tille@debian.org>  Tue, 30 Oct 2018 11:50:47 +0100
