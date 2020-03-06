@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: test debian package build
       id: debian
-      uses: osallou/deb-checker-action
+      uses: osallou/deb-checker-action@latest
       with:
         err-on-lint: 'false'
     #- name: Get the output lint status
